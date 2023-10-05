@@ -1,15 +1,13 @@
 #include <stdio.h>
 
-/* this is the starting point of my code */
-
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
-
 {
-
-	char text[] = "Programming is like building a multilingual puzzle,";
-
+	char text[] = "\"Programming is like building a multilingual puzzle";
 	puts(text);
-
-	return (0); 
-
+	return (0);
 }
