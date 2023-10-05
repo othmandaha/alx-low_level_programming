@@ -1,12 +1,15 @@
-#include <stdio.h> 
+#include <stdio.h>
 
-int main(void) 
+/* this is the starting point of my code */
+
+int main(void)
+
 {
-	char text[] = "with proper grammar, but the outcome is a piece of art,";
-	puts(text);
-	return 0; 
-		
-	
 
+	char text[] = "Programming is like building a multilingual puzzle,";
+
+	puts(text);
+
+	return (0); 
 
 }
