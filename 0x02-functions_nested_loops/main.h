@@ -1,4 +1,3 @@
-#include "_putchar.c"
 #ifndef main_h
 #define main_h
 
