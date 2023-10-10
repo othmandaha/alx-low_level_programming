@@ -14,11 +14,11 @@ int _abs(int n)
 
 	if (n > 0)
 	{
-		n = n;
+		v = n;
 	}
 	else if
 	{
-		n = n + n;
+		v = n + n;
 	}
 	return (n);
 }
