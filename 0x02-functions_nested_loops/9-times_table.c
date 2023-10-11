@@ -21,11 +21,11 @@ void times_table(void)
 			_putchar(' ');
 
 		j++;
+		}
 		if (j == 9)
 		{
 			j = 0;
-		}
-		}
+		{
 	_putchar(10);
 	i++;
 	}
