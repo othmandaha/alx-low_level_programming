@@ -20,9 +20,9 @@ void times_table(void)
 			_putchar(' ');
 			_putchar(' ');
 
-		j++
+		j++;
 		}
 	_putchar(10);
-	i++
+	i++;
 	}
 }
