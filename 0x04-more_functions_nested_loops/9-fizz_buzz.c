@@ -29,7 +29,10 @@ int main(void)
 		{
 			printf("%d", i);
 		}
+		if (i != 100)
+		{
 		putchar(' ');
+		}
 	i++;
 	}
 	putchar('\n');
