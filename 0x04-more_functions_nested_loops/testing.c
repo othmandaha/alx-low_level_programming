@@ -1,35 +1,28 @@
 #include <stdio.h>
 
-/**
- * print_diagonal - print a diagonal line
- * @n: the length of the diagonal line
- */
-
 int main(void)
 {
+	int n = 10;
 	int i = 1;
-	int j = 0;
-	int n = 2;
-	if (n > 0)
+	int s = 1;
+	int c = 0;
+	while (i <= n)
 	{
-		putchar(92);
-		putchar(10);
-		while (i < n)
+		while (s < n)
 		{
-			while (j < i)
-			{
-				putchar(' ');
-			j++;
-			}
-		putchar(92);
-		putchar(10);
-		i++;
-		j = 0;
+			putchar(' ');
+		s++;
 		}
-
+		while (c < i)
+		{
+			putchar('#');
+		c++;
+		}
+		putchar('\n');
+		s = 1 + i;
+		c = 0;
+		
+	i++;
 	}
-	else
-	{
-		putchar(10);
-	}
+	return (0);
 }
