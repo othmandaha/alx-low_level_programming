@@ -17,9 +17,9 @@ void more_numbers(void)
 		while (i <= 19)
 		{
 			_putchar(num[i]);
-		i++
+		i++;
 		}
 		_putchar(10);
-	j++
+	j++;
 	}
 }
