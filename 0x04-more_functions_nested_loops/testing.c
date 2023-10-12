@@ -2,27 +2,35 @@
 
 int main(void)
 {
-	int n = 10;
+	int size = 10;
 	int i = 1;
 	int s = 1;
 	int c = 0;
-	while (i <= n)
+
+	if (size > 0)
 	{
-		while (s < n)
+		while (i <= size)
 		{
-			putchar(' ');
-		s++;
+			while (s < n)
+			{
+				_putchar(' ');
+			s++;
+			}
+			while (c < i)
+			{
+				_putchar('#');
+			c++;
+			}
+			_putchar('\n');
+			s = 1 + i;
+			c = 0;
+
+		i++;
 		}
-		while (c < i)
-		{
-			putchar('#');
-		c++;
-		}
-		putchar('\n');
-		s = 1 + i;
-		c = 0;
-		
-	i++;
 	}
-	return (0);
+	else
+	{
+		_putchar('\n');
+	}
+	return(0);
 }
