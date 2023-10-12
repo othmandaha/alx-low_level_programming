@@ -19,4 +19,4 @@ int _isdigit(int c)
 		i = 0;
 	}
 	return (i);
-}	
+}
