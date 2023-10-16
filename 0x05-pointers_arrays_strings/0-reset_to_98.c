@@ -8,5 +8,5 @@
 int rest_to_98(int *n)
 {
 	int b = 98;
-	int *n = &b;
+	*n = &b;
 }
