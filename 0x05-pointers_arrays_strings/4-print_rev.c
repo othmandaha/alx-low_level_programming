@@ -5,7 +5,7 @@ void print_rev(char *str)
 	char a = *str;
 
 	str--;
-	while (*str >= '\0')
+	while (*str != '\0')
 	{
 		_putchar(*str);
 		str--;
