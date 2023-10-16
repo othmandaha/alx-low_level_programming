@@ -3,13 +3,13 @@
 void print_rev(char *str)
 {
 	char b = *str;
-	str--
+	str--;
 	while(*str != b)
 	{
 		_putchar(*str);
 		str--;
 	}
 	str++;
-	_putchar(*str);
+	_putchar(b);
 	_putchar(10);
 }
