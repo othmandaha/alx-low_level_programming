@@ -13,4 +13,5 @@ void puts2(char *str)
 		_putchar(*(str + length));
 		length += 2;
 	}
+	_putchar(10);
 }
