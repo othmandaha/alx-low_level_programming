@@ -1,14 +1,14 @@
 #include "main.h"
 
-void print_rev(char *str)
+void print_rev(char *s)
 {
 
-	str--;
-	str--;
+	s--;
+	s--;
 	while (*str != '\0')
 	{
 		_putchar(*str);
-		str--;
+		s--;
 	}
 	_putchar(10);
 		
