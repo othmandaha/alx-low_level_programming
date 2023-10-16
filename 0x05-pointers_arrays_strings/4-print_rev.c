@@ -5,9 +5,9 @@ void print_rev(char *s)
 
 	s--;
 	s--;
-	while (*str != '\0')
+	while (*s != '\0')
 	{
-		_putchar(*str);
+		_putchar(*s);
 		s--;
 	}
 	_putchar(10);
