@@ -8,7 +8,7 @@ void print_rev(char *str)
 	while (*str != '\0')
 	{
 		z = *str;
-		s++;
+		str++;
 	}
 	*str = z;
 	while (*str != a)
