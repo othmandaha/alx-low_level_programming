@@ -2,9 +2,9 @@
 
 void print_rev(char *str)
 {
-	char a = *str;
 
-	str =- 2;
+	str--
+	str--
 	while (*str != '\0')
 	{
 		_putchar(*str);
