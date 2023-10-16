@@ -2,14 +2,21 @@
 
 void print_rev(char *str)
 {
-	char b = *str;
-	str--;
-	while(*str != b)
+	char a = *str;
+	char z;
+
+	while (*str != '\0')
+	{
+		z = *str;
+		s++;
+	}
+	*str = z;
+	while (*str != a)
 	{
 		_putchar(*str);
 		str--;
 	}
-	str++;
-	_putchar(b);
+	_putchar(a);
 	_putchar(10);
+		
 }
