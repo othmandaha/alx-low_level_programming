@@ -7,9 +7,13 @@
 
 void rev_string(char *s)
 {
-	int length = sizeof(s);
-	length--;
+	int length = 0;
 
+	while (*(s + length) != '\0')
+	{
+		length++;
+	}
+		
 	while (length >= 0)
 	{
 		_putchar(s[length]);
