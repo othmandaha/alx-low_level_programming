@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
@@ -6,7 +7,7 @@
  * @n: number of elements in the array
  */
 
-void print_array(int *a, int n)
+void print_array(int *a, int *n)
 {
 	int i;
 	for(i = 0; a[i] < a[n]; i++)
