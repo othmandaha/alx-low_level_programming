@@ -8,7 +8,7 @@ void print_rev(char *str)
 	while (str >= &a)
 	{
 		_putchar(*str);
-		str--;
+		str++;
 	}
 	_putchar(a);
 	_putchar(10);
