@@ -11,6 +11,6 @@ void puts2(char *str)
 	while (*str != '\0')
 	{
 		_putchar(*(str + length));
-		length =+ 2;
+		length += 2;
 	}
 }
