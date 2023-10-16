@@ -5,6 +5,7 @@
  * @n: address of an int
  *
  * Retrun: returns 0
+ */
 
 int rest_to_98(int *n)
 {
