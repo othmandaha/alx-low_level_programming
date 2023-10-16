@@ -10,7 +10,7 @@ void puts2(char *str)
 	int length = 0;
 	int i;
 
-	while (*str !=)
+	while (*str != '\0')
 		length++;
 	while (*str > length)
 	{
