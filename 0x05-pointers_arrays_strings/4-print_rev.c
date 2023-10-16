@@ -3,12 +3,20 @@
 void print_rev(char *s)
 {
 
-	s--;
-	while (*s != '\0')
+	int l = 0;
+
+	while (*(s + l) != '\0')
 	{
-		_putchar(*s);
-		s--;
+		l++;
+	}
+	
+	while (l >= 0)
+	{
+		_putchar(*(s + l));
+		l--;
 	}
 	_putchar(10);
+
+
 		
 }
