@@ -7,7 +7,7 @@
 
 void rev_string(char *s)
 {
-	int length = sizeof(*s);
+	int length = sizeof(s);
 	length--;
 
 	while (length >= 0)
