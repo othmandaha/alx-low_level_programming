@@ -9,7 +9,7 @@
 
 char *_strcpy(char *dest, char *src)
 {
-	int length = strlen(*src);
+	int length = strlen(src);
 	int i;
 
 	for(i = 0; i <= length; i++)
