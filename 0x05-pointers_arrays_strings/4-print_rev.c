@@ -10,8 +10,8 @@ void print_rev(char *str)
 		z = *str;
 		str++;
 	}
-	*str = z;
-	while (*str != a)
+	str--
+	while (str != &a)
 	{
 		_putchar(*str);
 		str--;
