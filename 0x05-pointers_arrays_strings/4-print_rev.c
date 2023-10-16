@@ -5,10 +5,10 @@ void print_rev(char *str)
 	char a = *str;
 
 	str--;
-	while (str >= &a)
+	while (str >= '\0')
 	{
 		_putchar(*str);
-		str++;
+		str--;
 	}
 	_putchar(a);
 	_putchar(10);
