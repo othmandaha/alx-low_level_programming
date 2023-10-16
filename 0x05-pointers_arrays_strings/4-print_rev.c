@@ -9,7 +9,7 @@ void print_rev(char *s)
 	{
 		l++;
 	}
-	l--	
+	l--;	
 	while (l >= 0)
 	{
 		_putchar(*(s + l));
