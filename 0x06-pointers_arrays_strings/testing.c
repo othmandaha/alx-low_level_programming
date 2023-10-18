@@ -30,16 +30,16 @@ return (0);
 
 char *_strncat(char *dest, char *src, int n)
 {
-	int d = strlen(dest);
-	int s = strlen(src);
-	int i = 0;
+        int d = strlen(dest);
+        int s = strlen(src);
+        int i = 0;
 
-	while (i < n && i < s)
-	{
-		dest[d] = src[i];
-		i++;
-		d++;
-	}
+        while (i < n && i < s)
+        {
+                dest[d] = src[i];
+                i++;
+                d++;
+        }
 
-	return (dest);
+        return (dest);
 }
