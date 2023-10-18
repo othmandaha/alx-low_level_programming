@@ -1,7 +1,41 @@
 #include <stdio.h>
-#include <string.h>
 
-int _strcmp(char *s1, char *s2);
+/**
+ * main - check the code
+ * @a: an array of integers
+ * @n: the number of elements to swap
+ *
+ * Return: nothing.
+ */
+void reverse_array(int *a, int n)
+{
+	int i = 0;
+	int temp;
+	while (i < n / 2)
+	{
+        temp = a[i];
+        a[i] = a[n - i - 1];
+        a[n - i - 1] = temp;
+        i++;
+	}
+}
+
+void print_array(int *a, int n)
+{
+    int i;
+
+    i = 0;
+    while (i < n)
+    {
+        if (i != 0)
+        {
+            printf(", ");
+        }
+        printf("%d", a[i]);
+        i++;
+    }
+    printf("\n");
+}
 
 /**
  * main - check the code
@@ -10,33 +44,10 @@ int _strcmp(char *s1, char *s2);
  */
 int main(void)
 {
-    char s1[] = "World!   ";
-    char s2[] = "World!";
+    int a[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 98, 1024, 1337};
 
-    printf("%d\n", _strcmp(s1, s2));
-    printf("%d\n", _strcmp(s2, s1));
-    printf("%d\n", _strcmp(s1, s1));
+    print_array(a, sizeof(a) / sizeof(int));
+    reverse_array(a, sizeof(a) / sizeof(int));
+    print_array(a, sizeof(a) / sizeof(int));
     return (0);
-}
-int _strcmp(char *s1, char *s2)
-{
-	int i = 0;
-	int n;
-
-	while (s1[i] != '\0' || s2[i] != '\0')
-	{
-		if ((int)s1[i] == (int)s2[i])
-		{
-			i++;
-			n = 0;
-		}
-		else
-		{
-			n = (int)s1[i] - (int)s2[i];
-			break;
-		}
-
-	}
-
-	return (n);
 }
