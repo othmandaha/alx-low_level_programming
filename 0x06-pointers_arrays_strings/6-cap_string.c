@@ -19,15 +19,12 @@ char *cap_string(char *s)
 			s[i] == 123 ||  s[i] == 125 || s[i] == 59)
 		{
 			i++;
-			if (s[i] <= 'z' && s[i] >= 'a')
+			if (s[i + 1] <= 'z' && s[i + 1] >= 'a')
 			{
-				s[i] = s[i] - 32;
+				s[i + 1] = s[i + 1] - 32;
 			}
 		}
-		else
-		{
-			i++;
-		}
+		i++;
 	}
 	return (s);
 }
