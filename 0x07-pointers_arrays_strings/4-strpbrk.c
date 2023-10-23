@@ -1,9 +1,9 @@
-#include <stdio.h>
-
+#include "main.h"
 /**
- * main - check the code
- *
- * Return: Always 0.
+ * _strpbrk - Entry point
+ * @s: input
+ * @accept: input
+ * Return: Always 0 (Success)
  */
 
 char *_strpbrk(char *s, char *accept)
@@ -13,6 +13,7 @@ char *_strpbrk(char *s, char *accept)
 	while (*(s + i) != '\0')
 	{
 		int j = 0;
+
 		while (*(accept + j) != '\0')
 		{
 			if (*(s + i) == *(accept + j))
@@ -25,14 +26,4 @@ char *_strpbrk(char *s, char *accept)
 	}
 
 	return (0);
-}
-int main(void)
-{
-    char *s = "hello, world";
-    char *f = "world";
-    char *t;
-
-    t = _strpbrk(s, f);
-    printf("%s\n", t);
-    return (0);
 }
