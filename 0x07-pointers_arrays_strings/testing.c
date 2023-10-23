@@ -6,47 +6,35 @@
  * Return: Always 0.
  */
 
-char *_strstr(char *haystack, char *needle)
+void print_chessboard(char (*a)[8])
 {
 	int i = 0;
-	char *p;
-
-	while (*(haystack + i) != '\0')
+	int j = 0;
+	
+	while (i < 8)
 	{
-		int j = 0;
-		if (*(haystack + i) == *(needle + j))
+		j = 0;
+		while (j < 8)
 		{
-			p = haystack + i;
-			while (*(haystack + i) == *(needle + j))
-			{
-				i++;
-				j++;
-			}	
-
-			if (*(needle + i) == '\0')
-			{
-				return (p);
-			}
-			else
-			{
-				i = p - haystack + 1;
-			}
-			
+			putchar(a[i][j]);
+			j++;
 		}
-		else 
-		{
-			i++;
-		}
+		putchar(10);
+		i++;
 	}
-	return (0);
 }
 int main(void)
 {
-    char *s = "hewollo, world s";
-    char *f = "world";
-    char *t;
-
-    t = _strstr(s, f);
-    printf("%s\n", t);
+    char board[8][8] = {
+        {'r', 'k', 'b', 'q', 'k', 'b', 'k', 'r'},
+        {'p', 'p', 'p', 'p', 'p', 'p', 'p', 'p'},
+        {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+        {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+        {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+        {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+        {'P', 'P', 'P', 'P', 'P', 'P', 'P', 'P'},
+        {'R', 'K', 'B', 'Q', 'K', 'B', 'K', 'R'},
+    };
+    print_chessboard(board);
     return (0);
 }
