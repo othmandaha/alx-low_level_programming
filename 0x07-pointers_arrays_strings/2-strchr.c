@@ -7,7 +7,6 @@
  * Return: returns the adress of the first occurence of the character
  */
 
-
 char *_strchr(char *s, char c)
 {
 	int i = 0;
