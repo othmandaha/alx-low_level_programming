@@ -1,9 +1,9 @@
-#include <stdio.h>
-
+#include "main.h"
 /**
- * main - check the code
- *
- * Return: Always 0.
+ * _strstr - Entry point
+ * @haystack: input
+ * @needle: input
+ * Return: Always 0 (Success)
  */
 
 char *_strstr(char *haystack, char *needle)
@@ -14,6 +14,7 @@ char *_strstr(char *haystack, char *needle)
 	while (*(haystack + i) != '\0')
 	{
 		int j = 0;
+
 		if (*(haystack + i) == *(needle + j))
 		{
 			p = haystack + i;
@@ -21,7 +22,7 @@ char *_strstr(char *haystack, char *needle)
 			{
 				i++;
 				j++;
-			}	
+			}
 
 			if (*(needle + i) == '\0')
 			{
@@ -31,22 +32,11 @@ char *_strstr(char *haystack, char *needle)
 			{
 				i = p - haystack + 1;
 			}
-			
 		}
-		else 
+		else
 		{
 			i++;
 		}
 	}
 	return (0);
-}
-int main(void)
-{
-    char *s = "hewollo, world s";
-    char *f = "world";
-    char *t;
-
-    t = _strstr(s, f);
-    printf("%s\n", t);
-    return (0);
 }
