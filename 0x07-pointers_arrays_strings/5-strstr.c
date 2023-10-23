@@ -30,7 +30,7 @@ char *_strstr(char *haystack, char *needle)
 			}
 			else
 			{
-				i = p - haystack + 1;
+				i = p - haystack + j;
 			}
 		}
 		else
@@ -38,5 +38,5 @@ char *_strstr(char *haystack, char *needle)
 			i++;
 		}
 	}
-	return NULL
+	return (0);
 }
