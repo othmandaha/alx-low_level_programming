@@ -4,6 +4,7 @@
  * _strchr - a function that locates a character in a string
  * @s: the string to be examined
  * @c: the charater to be located
+ *
  * Return: returns the adress of the first occurence of the character
  */
 
@@ -20,5 +21,5 @@ char *_strchr(char *s, char c)
 		i++;
 	}
 
-	return (NULL);
+	return (0);
 }
