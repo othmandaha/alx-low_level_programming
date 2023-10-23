@@ -1,4 +1,10 @@
-#include <stdio.h>
+#include "main.h"
+/**
+ * _strspn - Entry point
+ * @s: input
+ * @accept: input
+ * Return: Always 0 (Success)
+ */
 
 unsigned int _strspn(char *s, char *accept)
 {
@@ -19,21 +25,10 @@ unsigned int _strspn(char *s, char *accept)
 				length++;
 				matchfound = 1;
 			}
-			
 		}
 		if (!matchfound)
 		{
 			return (length);
-		}	
+		}
 	}
-}
-int main(void)
-{
-    char *s = "hello, world";
-    char *f = "oleh";
-    unsigned int n;
-
-    n = _strspn(s, f);
-    printf("%u\n", n);
-    return (0);
 }
