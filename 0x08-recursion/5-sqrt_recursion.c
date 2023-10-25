@@ -3,6 +3,7 @@
 /**
  * _sqrt_recursion - returns the natural square root of a number
  * @n: number to calculate the square root of
+ * @i: an iterator
  *
  * Return: the resulting square root
  */
@@ -21,7 +22,7 @@ int _sqrt_recursion(int n)
  * _sqrt - recurses to find the natural
  * square root of a number
  * @n: number to calculate the sqaure root of
- * @i: iterator
+ * @i: an iterator
  *
  * Return: the resulting square root
  */
@@ -36,26 +37,8 @@ int _sqrt(int n, int i)
 	{
 		return (i);
 	}
-	else 
+	else
 	{
 		return (_sqrt(n, i + 1));
 	}
-}
-int main(void)
-{
-    int r;
-
-    r = _sqrt_recursion(1);
-    printf("%d\n", r);
-    r = _sqrt_recursion(1024);
-    printf("%d\n", r);
-    r = _sqrt_recursion(16);
-    printf("%d\n", r);
-    r = _sqrt_recursion(17);
-    printf("%d\n", r);
-    r = _sqrt_recursion(25);
-    printf("%d\n", r);
-    r = _sqrt_recursion(-1);
-    printf("%d\n", r);
-    return (0);
 }
