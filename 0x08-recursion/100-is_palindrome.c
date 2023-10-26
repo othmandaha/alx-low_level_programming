@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 
 /**
  * is_palindrome - checks if a string is palindrome
@@ -9,7 +10,7 @@
 
 int is_palindrome(char *s)
 {
-	int half = _strlen_recursion(s) / 2;
+	int half = strlen(s) / 2;
 	if (*(s) != *(s + half + 1))
 		return (1);
 	else if (*(s) == *(s + half + 1) && *(s) != *(s + half))
