@@ -10,14 +10,14 @@
 
 int is_palindrome(char *s)
 {
-	int half = strlen(s) / 2;
-	if (*(s) != *(s + half + 1))
+	int len = strlen(s);
+	if (len <= 1)
 		return (1);
-	else if (*(s) == *(s + half + 1) && *(s) != *(s + half + 1))
+	else if (*(s) == *(len -1))
 	{
-		return (0);
+		return (is_plindrome(s + 1));
 	}
 	else
-		return (is_palindrome(s + 1));
+		return (0);
 	       	
 }
