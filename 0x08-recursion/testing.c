@@ -1,66 +1,35 @@
 #include <stdio.h>
+#include <string.h>
 
-
-int prime_number(int n, int i);
-
-/**
- * is_prime_number - says if an integer is a prime number or not
- * @n: number to evaluate
- *
- * Return: 1 if n is a prime number, 0 if not
- */
-
-int is_prime_number(int n)
+int is_palindrome(char *s)
 {
-	if (n == 1 || n == -1)
-	{
-		return(0);
-	}
-	return(prime_number(n, 2));
-}
-
-/**
- * actual_prime - calculates if a number is prime recursively
- * @n: number to evaluate
- * @i: iterator
- *
- * Return: 1 if n is prime, 0 if not
- */
-
-int prime_number(int n, int i)
-{
-	if (i >= n)
-	{
-		return (1);	
-	}
-	else if (n % i == 0)
+	int half = strlen(s) / 2;
+	if (*(s) != *(s + half + 1))
+		return (1);
+	else if (*(s) == *(s + half + 1) && *(s) != *(s + half))
 	{
 		return (0);
 	}
 	else
-	{
-		return (prime_number(n, i + 1));
-	}
+		return (is_palindrome(s + 1));
+	       	
 }
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
 int main(void)
 {
     int r;
 
-    r = is_prime_number(1);
+    r = is_palindrome("level");
     printf("%d\n", r);
-    r = is_prime_number(1024);
+    r = is_palindrome("redder");
     printf("%d\n", r);
-    r = is_prime_number(16);
+    r = is_palindrome("test");
     printf("%d\n", r);
-    r = is_prime_number(17);
+    r = is_palindrome("step on no pets");
     printf("%d\n", r);
-    r = is_prime_number(25);
-    printf("%d\n", r);
-    r = is_prime_number(-1);
-    printf("%d\n", r);
-    r = is_prime_number(113);
-    printf("%d\n", r);
-    r = is_prime_number(7919);
-    printf("%d\n", r);
-    return (0);
-}
+}    
