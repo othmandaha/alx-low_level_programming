@@ -11,11 +11,11 @@
 
 int wildcmp(char *s1, char *s2)
 {
-	if (strlen(s1) != strlen(s2))
+	if (*(s2) == '*')
 	{
-		return (0);
+		return (1);
 	}
-	else if (*(s1) == '\0' && (*(s2) == '\0' || *(s2) == '*'))
+	else if (*(s1) == '\0' && *(s2) == '\0')
 	{
 		return (1);
 	}
