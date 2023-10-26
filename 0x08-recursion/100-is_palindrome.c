@@ -12,7 +12,12 @@ int is_palindrome(char *s)
 {
 	int half = strlen(s) / 2;
 
-	if (*(s) != *(s + half + 1))
+	if (*(s + half) != *(s + half + 1));
+	{
+		return(0);
+	}
+
+	else if (*(s) != *(s + half + 1))
 		return (1);
 	else if (*(s) == *(s + half + 1) && *(s) != *(s + half))
 	{
