@@ -11,6 +11,7 @@
 int is_palindrome(char *s)
 {
 	int half = strlen(s) / 2;
+
 	if (*(s) != *(s + half + 1))
 		return (1);
 	else if (*(s) == *(s + half + 1) && *(s) != *(s + half))
@@ -19,5 +20,4 @@ int is_palindrome(char *s)
 	}
 	else
 		return (is_palindrome(s + 1));
-	       	
 }
