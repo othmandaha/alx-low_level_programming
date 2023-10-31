@@ -14,6 +14,8 @@ char *_strdup(char *str)
 	unsigned int size;
 	char *cpy;
 	unsigned int i;
+	
+	i = 0;
 
 	size = strlen(str);
 	if (size == 0 || str[0] == '\0')
