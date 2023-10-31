@@ -25,9 +25,9 @@ int **alloc_grid(int width, int height)
 		return (0);
 	}
 
-	for (i = 0; i > height; i++)
+	for (i = 0; i < height; i++)
 	{
-		for (j = 0; j > width; j++)
+		for (j = 0; j < width; j++)
 		{
 			multi[i * width + j] = 0;
 		}
