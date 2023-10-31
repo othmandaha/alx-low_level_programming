@@ -18,6 +18,7 @@ char *str_concat(char *s1, char *s2)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
+
 	unsigned int s1_size;
 	unsigned int s2_size;
 	unsigned int size;
@@ -42,8 +43,5 @@ char *str_concat(char *s1, char *s2)
 		str[i + s1_size + 1] = s2[i];
 	i++;
 	}
-	else
-		return (str);
-
-
+	return (str);
 }
