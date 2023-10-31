@@ -13,17 +13,13 @@
 
 char *str_concat(char *s1, char *s2)
 {
+	unsigned int s1_size, s2_size, size, i;
+	char *str;
 
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
-		s2 = "";
-
-	unsigned int s1_size;
-	unsigned int s2_size;
-	unsigned int size;
-	unsigned int i;
-	char *str;
+		s2 = ""
 
 	s1_size = strlen(s1);
 	s2_size = strlen(s2);
