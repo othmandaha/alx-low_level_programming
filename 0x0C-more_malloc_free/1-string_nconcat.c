@@ -42,11 +42,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	i++;
 	}
 	i = 0;
-	while (i <= n)
+	while (i < n)
 	{
 		str[i + s1_size] = s2[i];
 	i++;
 	}
+
+	str[size] = '\0';
 	return (str);
 
 }
