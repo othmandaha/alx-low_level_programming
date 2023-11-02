@@ -20,14 +20,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	char *str;
 
 	if (s1 == NULL)
-		s1_size = 0;
-	else
-		s1_size = strlen(s1);
+		s1 = "";
 	if (s2 == NULL)
-		s2_size = 0;
-	else
-		s2_size = strlen(s2);
-
+		s2 = "";	
+	s1_size = strlen(s1);
+	s2_size = strlen(s2);
 	if (s2_size < n)
 		n = s2_size;
 
