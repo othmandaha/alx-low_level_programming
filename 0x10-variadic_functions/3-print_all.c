@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "variadic_function.h"
+#include "variadic_functions.h"
 #include <string.h>
 #include <stdarg.h>
 
@@ -19,22 +19,24 @@ void print_all(const char * const format, ...)
 	i = strlen(format);
 	j = 0;
 	va_start(pa, format);
-	while (i > 0)
+	while (i > 1)
 	{
 		switch (format[j])
 		{
 			case 'c':
-				printf("%c", va_arg(pa, char));
+				printf("%s%c", sep, va_arg(pa, int));
 				break;
 			case 'i':
-				printf("%d", va_arg(pa, int));
+				printf("%s%d", sep, va_arg(pa, int));
 				break;
 			case 'f':
-				printf("%f", va_arg(pa, float));
+				printf("%s%f", sep, va_arg(pa, double));
 				break;
 			case 's':
 				s = va_arg(pa, char *);
-				printf("%s", s);
+				if (!s)
+					s = "(nil)";
+				printf("%s%s", sep, s);
 				break;
 			default:
 				j++;
