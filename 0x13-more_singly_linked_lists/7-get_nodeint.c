@@ -1,5 +1,4 @@
 #include "lists.h"
-#include <string.h>
 
 /**
  * get_nodeint_at_index - it gives the node at index
