@@ -34,6 +34,10 @@ unsigned int binary_to_uint(const char *b)
 
 	while (b[i] != '\0')
 	{
+		i++;
+	}
+	while (i >= 0)
+	{
 		if (b[i] == '0')
 			power++;
 		else if (b[i] == '1')
@@ -43,8 +47,7 @@ unsigned int binary_to_uint(const char *b)
 		}
 		else
 			return (0);
-	i++;
+	i--;
 	}
 	return (decimal);
 }
-
