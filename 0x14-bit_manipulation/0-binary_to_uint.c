@@ -36,7 +36,7 @@ unsigned int binary_to_uint(const char *b)
 	{
 		i++;
 	}
-	while (i >= 0)
+	while (i > 0)
 	{
 		if (b[i] == '0')
 			power++;
